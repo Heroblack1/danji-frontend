@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 // import "./Contact.css";
 import { useNavigate } from "react-router-dom";
 import danji from "./assets/ChatGPT Image Jul 4, 2026, 06_12_53 PM.png";
+import axios from "axios";
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -11,6 +12,19 @@ const Contact = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [scrolled, setScrolled] = useState(false);
 
+  // formdata
+  // formdata
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    service: "",
+    budget: "",
+    message: "",
+  });
+
+  // scroll effect
+  // scroll effect
   useEffect(() => {
     let lastScrollY = window.scrollY;
 
@@ -74,14 +88,70 @@ const Contact = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e) => {
+  // handle input changes in the form
+  // handle input changes in the form
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // submitting formdata
+  // submitting formdata
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(formData);
+
+  //   setFormStatus(
+  //     "Thanks for reaching out. We'll get back to you as soon as possible.",
+  //   );
+
+  //   e.target.reset();
+  // };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    setFormStatus(
-      "Thanks for reaching out. We'll get back to you as soon as possible.",
-    );
+    try {
+      const response = await fetch("http://localhost:5000/contact", {
+        method: "POST",
 
-    e.target.reset();
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Something went wrong");
+      }
+
+      setFormStatus(
+        "Thanks for reaching out. We'll get back to you as soon as possible.",
+      );
+
+      console.log("Server response:", data);
+
+      alert("Your message was submitted successfully!");
+
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        service: "",
+        budget: "",
+        message: "",
+      });
+    } catch (error) {
+      // console.error("Error:", error);
+
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -293,9 +363,12 @@ const Contact = () => {
                   <label htmlFor="name">Your Name</label>
 
                   <input
+                    name="name"
                     id="name"
                     type="text"
                     placeholder="John Doe"
+                    value={formData.name}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -304,8 +377,11 @@ const Contact = () => {
                   <label htmlFor="email">Email Address</label>
 
                   <input
+                    name="email"
                     id="email"
                     type="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="john@example.com"
                     required
                   />
@@ -318,8 +394,11 @@ const Contact = () => {
                 </label>
 
                 <input
+                  name="company"
                   id="company"
                   type="text"
+                  value={formData.company}
+                  onChange={handleChange}
                   placeholder="Your company name"
                 />
               </div>
@@ -327,7 +406,13 @@ const Contact = () => {
               <div className="form-group">
                 <label htmlFor="service">What can we help with?</label>
 
-                <select id="service" required defaultValue="">
+                <select
+                  name="service"
+                  id="service"
+                  required
+                  value={formData.service}
+                  onChange={handleChange}
+                >
                   <option value="" disabled>
                     Select a service
                   </option>
@@ -347,7 +432,12 @@ const Contact = () => {
                   Estimated Budget <span>(Optional)</span>
                 </label>
 
-                <select id="budget" defaultValue="">
+                <select
+                  name="budget"
+                  id="budget"
+                  value={formData.budget}
+                  onChange={handleChange}
+                >
                   <option value="" disabled>
                     Select a budget range
                   </option>
@@ -368,10 +458,13 @@ const Contact = () => {
                 <label htmlFor="message">Tell us about your project</label>
 
                 <textarea
+                  name="message"
                   id="message"
                   rows="6"
                   placeholder="Tell us about your project, what you're trying to build, or the problem you're trying to solve..."
                   required
+                  value={formData.message}
+                  onChange={handleChange}
                 ></textarea>
               </div>
 

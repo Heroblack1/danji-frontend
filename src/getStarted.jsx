@@ -14,6 +14,17 @@ const GetStarted = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [scrolled, setScrolled] = useState(false);
 
+  // formdata
+  // formdata
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    service: "",
+    budget: "",
+    message: "",
+  });
+
   useEffect(() => {
     let lastScrollY = window.scrollY;
 
@@ -74,9 +85,67 @@ const GetStarted = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e) => {
+  // handle input changes in the form
+  // handle input changes in the form
+  const handleChange = (e) => {
+    setFormData((previous) => ({
+      ...previous,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  // submitting formdata
+  // submitting formdata
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(formData);
+
+  //   setFormStatus(
+  //     "Thanks for reaching out. We'll get back to you as soon as possible.",
+  //   );
+
+  //   e.target.reset();
+  // };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+
+    try {
+      const response = await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Something went wrong");
+      }
+
+      // SUCCESS
+      console.log("Server response:", data);
+
+      // This is what makes .gs-success appear
+      setSubmitted(true);
+
+      // Clear the form
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        service: "",
+        budget: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Submission error:", error);
+
+      alert(error.message || "Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -436,14 +505,26 @@ const GetStarted = () => {
                   <div className="gs-field">
                     <label>Full Name</label>
 
-                    <input type="text" placeholder="John Doe" required />
+                    <input
+                      name="name"
+                      id="name"
+                      type="text"
+                      placeholder="John Doe"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                    />
                   </div>
 
                   <div className="gs-field">
                     <label>Email Address</label>
 
                     <input
+                      name="email"
+                      id="email"
                       type="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       placeholder="john@example.com"
                       required
                     />
@@ -458,7 +539,14 @@ const GetStarted = () => {
                     <span> (Optional)</span>
                   </label>
 
-                  <input type="text" placeholder="Your company" />
+                  <input
+                    name="company"
+                    id="company"
+                    type="text"
+                    value={formData.company}
+                    onChange={handleChange}
+                    placeholder="Your company name"
+                  />
                 </div>
 
                 {/* SERVICE */}
@@ -466,7 +554,13 @@ const GetStarted = () => {
                 <div className="gs-field">
                   <label>What service do you need?</label>
 
-                  <select defaultValue="" required>
+                  <select
+                    name="service"
+                    id="service"
+                    required
+                    value={formData.service}
+                    onChange={handleChange}
+                  >
                     <option value="" disabled>
                       Select a service
                     </option>
@@ -485,7 +579,7 @@ const GetStarted = () => {
 
                 {/* PROJECT TYPE */}
 
-                <div className="gs-field">
+                {/* <div className="gs-field">
                   <label>What are you looking to accomplish?</label>
 
                   <select defaultValue="" required>
@@ -503,7 +597,7 @@ const GetStarted = () => {
 
                     <option value="other">Something else</option>
                   </select>
-                </div>
+                </div> */}
 
                 {/* BUDGET */}
 
@@ -513,7 +607,12 @@ const GetStarted = () => {
                     <span> (Optional)</span>
                   </label>
 
-                  <select defaultValue="">
+                  <select
+                    name="budget"
+                    id="budget"
+                    value={formData.budget}
+                    onChange={handleChange}
+                  >
                     <option value="" disabled>
                       Select a range
                     </option>
@@ -536,9 +635,13 @@ const GetStarted = () => {
                   <label>Tell us about your project</label>
 
                   <textarea
+                    name="message"
+                    id="message"
                     rows="6"
-                    placeholder="What are you trying to build? What problem are you trying to solve? Tell us anything you think would be useful..."
+                    placeholder="Tell us about your project, what you're trying to build, or the problem you're trying to solve..."
                     required
+                    value={formData.message}
+                    onChange={handleChange}
                   ></textarea>
                 </div>
 

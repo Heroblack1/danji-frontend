@@ -10234,3 +10234,1615 @@ body {
     gap: 12px;
   }
 }
+
+/* =========================================================
+   DANJITECH ANIMATED HERO
+========================================================= */
+
+.dt-hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  padding: 120px 7% 80px;
+
+  background:
+    radial-gradient(
+      circle at 75% 45%,
+      rgba(31, 112, 255, 0.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(0, 174, 255, 0.08),
+      transparent 30%
+    ),
+    #020b1c;
+
+  color: white;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.dt-hero-grid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(75, 160, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75, 160, 255, 0.035) 1px, transparent 1px);
+
+  background-size: 55px 55px;
+
+  mask-image: linear-gradient(to bottom, black 20%, transparent 90%);
+
+  animation: dtGridMove 18s linear infinite;
+}
+
+@keyframes dtGridMove {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(55px);
+  }
+}
+
+/* =========================================================
+   GLOWING ORBS
+========================================================= */
+
+.dt-hero-orb {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(1px);
+
+  pointer-events: none;
+}
+
+.dt-orb-one {
+  width: 350px;
+  height: 350px;
+
+  right: 5%;
+  top: 10%;
+
+  background: rgba(25, 104, 255, 0.09);
+
+  box-shadow: 0 0 100px rgba(25, 104, 255, 0.18);
+
+  animation: dtOrbFloat 8s ease-in-out infinite;
+}
+
+.dt-orb-two {
+  width: 180px;
+  height: 180px;
+
+  right: 40%;
+  bottom: 5%;
+
+  background: rgba(0, 183, 255, 0.06);
+
+  animation: dtOrbFloat 11s ease-in-out infinite reverse;
+}
+
+.dt-orb-three {
+  width: 100px;
+  height: 100px;
+
+  left: 8%;
+  top: 25%;
+
+  background: rgba(46, 132, 255, 0.05);
+
+  animation: dtOrbFloat 7s ease-in-out infinite;
+}
+
+@keyframes dtOrbFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -25px, 0);
+  }
+}
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.dt-hero-content {
+  position: relative;
+
+  z-index: 10;
+
+  width: 52%;
+  max-width: 720px;
+
+  animation: dtHeroContentIn 1s ease forwards;
+}
+
+@keyframes dtHeroContentIn {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.dt-hero-label {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 24px;
+
+  color: #58b9ff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.dt-hero-label span {
+  display: block;
+
+  width: 35px;
+  height: 2px;
+
+  background: #58b9ff;
+
+  box-shadow: 0 0 12px rgba(88, 185, 255, 0.8);
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.dt-hero-content h1 {
+  margin: 0;
+
+  font-size: clamp(44px, 5vw, 76px);
+
+  line-height: 1.03;
+
+  letter-spacing: -3px;
+
+  font-weight: 800;
+}
+
+.dt-hero-content h1 span {
+  background: linear-gradient(90deg, #ffffff, #58b9ff, #2787ff);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+
+  animation: dtTextGlow 4s ease-in-out infinite;
+}
+
+@keyframes dtTextGlow {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+
+  50% {
+    filter: brightness(1.3);
+  }
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.dt-hero-content > p {
+  max-width: 650px;
+
+  margin: 30px 0;
+
+  color: #91a5bd;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.dt-hero-services {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin: 25px 0 35px;
+}
+
+.dt-hero-services div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #c4d1df;
+
+  font-size: 14px;
+}
+
+.dt-hero-services span {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 27px;
+  height: 27px;
+
+  border-radius: 8px;
+
+  background: rgba(70, 157, 255, 0.1);
+
+  border: 1px solid rgba(70, 157, 255, 0.2);
+
+  color: #58b9ff;
+
+  box-shadow: 0 0 15px rgba(70, 157, 255, 0.08);
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.dt-hero-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.dt-hero-primary,
+.dt-hero-secondary {
+  border: none;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+.dt-hero-primary {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 15px 22px;
+
+  border-radius: 10px;
+
+  color: white;
+
+  background: linear-gradient(135deg, #1677ff, #0052d4);
+
+  box-shadow: 0 10px 35px rgba(0, 100, 255, 0.2);
+}
+
+.dt-hero-primary span {
+  font-size: 20px;
+
+  transition: transform 0.3s ease;
+}
+
+.dt-hero-primary:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 18px 45px rgba(0, 100, 255, 0.35);
+}
+
+.dt-hero-primary:hover span {
+  transform: translateX(5px);
+}
+
+.dt-hero-secondary {
+  padding: 15px 22px;
+
+  border-radius: 10px;
+
+  color: #b7c8da;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dt-hero-secondary:hover {
+  transform: translateY(-5px);
+
+  color: white;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border-color: rgba(88, 185, 255, 0.3);
+}
+
+/* =========================================================
+   AI VISUAL
+========================================================= */
+
+.dt-ai-visual {
+  position: absolute;
+
+  right: 7%;
+  top: 50%;
+
+  width: 470px;
+  height: 470px;
+
+  transform: translateY(-50%);
+
+  z-index: 4;
+}
+
+/* =========================================================
+   AI RINGS
+========================================================= */
+
+.dt-ai-ring {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(76, 166, 255, 0.15);
+
+  transform: translate(-50%, -50%);
+}
+
+.dt-ring-one {
+  width: 210px;
+  height: 210px;
+
+  animation: dtRingRotate 12s linear infinite;
+}
+
+.dt-ring-two {
+  width: 310px;
+  height: 310px;
+
+  border-style: dashed;
+
+  animation: dtRingRotate 20s linear infinite reverse;
+}
+
+.dt-ring-three {
+  width: 410px;
+  height: 410px;
+
+  border-color: rgba(76, 166, 255, 0.07);
+
+  animation: dtRingPulse 5s ease-in-out infinite;
+}
+
+@keyframes dtRingRotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes dtRingPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+/* =========================================================
+   AI CORE
+========================================================= */
+
+.dt-ai-core {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 125px;
+  height: 125px;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(65, 160, 255, 0.25),
+    rgba(4, 19, 42, 0.95) 65%
+  );
+
+  border: 1px solid rgba(88, 185, 255, 0.4);
+
+  box-shadow:
+    0 0 35px rgba(43, 142, 255, 0.35),
+    inset 0 0 35px rgba(43, 142, 255, 0.1);
+
+  animation: dtCorePulse 3s ease-in-out infinite;
+}
+
+.dt-ai-core-inner {
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #06162d;
+
+  border: 1px solid rgba(88, 185, 255, 0.5);
+
+  box-shadow: 0 0 25px rgba(88, 185, 255, 0.25);
+}
+
+.dt-ai-core-inner span {
+  color: #65c0ff;
+
+  font-size: 24px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-shadow: 0 0 15px rgba(88, 185, 255, 0.8);
+}
+
+@keyframes dtCorePulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 35px rgba(43, 142, 255, 0.25),
+      inset 0 0 35px rgba(43, 142, 255, 0.1);
+  }
+
+  50% {
+    box-shadow:
+      0 0 65px rgba(43, 142, 255, 0.5),
+      inset 0 0 50px rgba(43, 142, 255, 0.15);
+  }
+}
+
+/* =========================================================
+   NODES
+========================================================= */
+
+.dt-ai-node {
+  position: absolute;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: #65c0ff;
+
+  box-shadow:
+    0 0 15px #2e9cff,
+    0 0 35px rgba(46, 156, 255, 0.7);
+
+  animation: dtNodePulse 2s ease-in-out infinite;
+}
+
+.dt-node-one {
+  top: 18%;
+  left: 35%;
+}
+
+.dt-node-two {
+  top: 33%;
+  right: 10%;
+}
+
+.dt-node-three {
+  bottom: 17%;
+  right: 28%;
+}
+
+.dt-node-four {
+  bottom: 27%;
+  left: 12%;
+}
+
+.dt-node-five {
+  top: 12%;
+  right: 32%;
+}
+
+@keyframes dtNodePulse {
+  0%,
+  100% {
+    transform: scale(0.8);
+
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.5);
+
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   CONNECTION LINES
+========================================================= */
+
+.dt-ai-line {
+  position: absolute;
+
+  height: 1px;
+
+  transform-origin: left center;
+
+  background: linear-gradient(
+    90deg,
+    rgba(75, 164, 255, 0.6),
+    rgba(75, 164, 255, 0)
+  );
+
+  animation: dtLineGlow 2.5s ease-in-out infinite;
+}
+
+.dt-line-one {
+  width: 145px;
+
+  left: 35%;
+  top: 20%;
+
+  transform: rotate(35deg);
+}
+
+.dt-line-two {
+  width: 160px;
+
+  left: 60%;
+  top: 34%;
+
+  transform: rotate(-20deg);
+}
+
+.dt-line-three {
+  width: 150px;
+
+  left: 55%;
+  top: 70%;
+
+  transform: rotate(-35deg);
+}
+
+.dt-line-four {
+  width: 140px;
+
+  left: 22%;
+  top: 60%;
+
+  transform: rotate(20deg);
+}
+
+@keyframes dtLineGlow {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   FLOATING CARDS
+========================================================= */
+
+.dt-floating-card {
+  position: absolute;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 13px 17px;
+
+  min-width: 175px;
+
+  border-radius: 12px;
+
+  background: rgba(5, 20, 42, 0.7);
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(100, 185, 255, 0.12);
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+
+  animation: dtCardFloat 5s ease-in-out infinite;
+}
+
+.dt-floating-card strong {
+  display: block;
+
+  color: white;
+
+  font-size: 12px;
+}
+
+.dt-floating-card small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #7189a3;
+
+  font-size: 10px;
+}
+
+.dt-card-icon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  color: #5dbaff;
+
+  background: rgba(56, 153, 255, 0.08);
+
+  border: 1px solid rgba(56, 153, 255, 0.15);
+}
+
+.dt-card-one {
+  top: 13%;
+  left: -5%;
+}
+
+.dt-card-two {
+  top: 48%;
+  right: -10%;
+
+  animation-delay: -2s;
+}
+
+.dt-card-three {
+  bottom: 8%;
+  left: 0;
+
+  animation-delay: -3.5s;
+}
+
+@keyframes dtCardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.dt-scroll {
+  position: absolute;
+
+  bottom: 25px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #526a84;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.dt-scroll span {
+  position: relative;
+
+  width: 20px;
+  height: 30px;
+
+  border: 1px solid #3b5570;
+
+  border-radius: 20px;
+}
+
+.dt-scroll span::after {
+  content: "";
+
+  position: absolute;
+
+  top: 6px;
+  left: 50%;
+
+  width: 3px;
+  height: 6px;
+
+  transform: translateX(-50%);
+
+  border-radius: 3px;
+
+  background: #58b9ff;
+
+  animation: dtScroll 1.5s infinite;
+}
+
+@keyframes dtScroll {
+  0% {
+    opacity: 0;
+
+    transform: translateX(-50%) translateY(0);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+
+    transform: translateX(-50%) translateY(12px);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+  .dt-hero {
+    padding-top: 150px;
+
+    align-items: flex-start;
+  }
+
+  .dt-hero-content {
+    width: 60%;
+  }
+
+  .dt-ai-visual {
+    right: -100px;
+
+    opacity: 0.65;
+
+    transform: translateY(-50%) scale(0.8);
+  }
+}
+
+@media (max-width: 760px) {
+  .dt-hero {
+    min-height: 100vh;
+
+    padding: 150px 25px 100px;
+
+    align-items: center;
+  }
+
+  .dt-hero-content {
+    width: 100%;
+
+    max-width: 600px;
+
+    text-align: center;
+  }
+
+  .dt-hero-label {
+    justify-content: center;
+  }
+
+  .dt-hero-content h1 {
+    font-size: clamp(40px, 11vw, 60px);
+
+    letter-spacing: -2px;
+  }
+
+  .dt-hero-content > p {
+    font-size: 15px;
+  }
+
+  .dt-hero-services {
+    align-items: center;
+  }
+
+  .dt-hero-buttons {
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+  .dt-ai-visual {
+    position: absolute;
+
+    right: 50%;
+    top: 55%;
+
+    opacity: 0.13;
+
+    transform: translate(50%, -50%) scale(0.9);
+
+    pointer-events: none;
+  }
+
+  .dt-floating-card {
+    display: none;
+  }
+
+  .dt-scroll {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .dt-hero {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .dt-hero-content h1 {
+    font-size: 39px;
+  }
+
+  .dt-hero-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .dt-hero-primary,
+  .dt-hero-secondary {
+    width: 100%;
+
+    justify-content: center;
+  }
+}
+
+/* =========================================
+   ADMIN LOGIN
+========================================= */
+
+.adm-page {
+  min-height: 100vh;
+  width: 100%;
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(38, 91, 255, 0.15),
+      transparent 35%
+    ),
+    #020617;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+  box-sizing: border-box;
+
+  color: white;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.adm-login-card {
+  width: 100%;
+  max-width: 440px;
+
+  padding: 45px;
+
+  background: rgba(10, 22, 55, 0.8);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.4),
+    0 0 80px rgba(35, 82, 255, 0.08);
+
+  backdrop-filter: blur(20px);
+
+  box-sizing: border-box;
+}
+
+.adm-logo,
+.adm-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.adm-logo span,
+.adm-brand span {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: #5c8cff;
+
+  box-shadow: 0 0 15px rgba(92, 140, 255, 0.8);
+}
+
+.adm-login-heading {
+  margin: 55px 0 30px;
+}
+
+.adm-label {
+  display: block;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #6d94ff;
+
+  margin-bottom: 10px;
+}
+
+.adm-login-heading h1 {
+  font-size: 38px;
+
+  margin: 0 0 12px;
+
+  letter-spacing: -1px;
+}
+
+.adm-login-heading p {
+  color: #94a3b8;
+
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+.adm-login-card label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #cbd5e1;
+
+  font-size: 14px;
+}
+
+.adm-login-card input {
+  width: 100%;
+
+  padding: 15px 16px;
+
+  box-sizing: border-box;
+
+  border-radius: 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: rgba(0, 0, 0, 0.25);
+
+  color: white;
+
+  outline: none;
+
+  font-size: 15px;
+
+  transition: 0.25s;
+}
+
+.adm-login-card input:focus {
+  border-color: #5c8cff;
+
+  box-shadow: 0 0 0 3px rgba(92, 140, 255, 0.12);
+}
+
+.adm-login-card input::placeholder {
+  color: #64748b;
+}
+
+.adm-error {
+  margin-top: 12px;
+
+  padding: 12px;
+
+  border-radius: 9px;
+
+  background: rgba(239, 68, 68, 0.1);
+
+  border: 1px solid rgba(239, 68, 68, 0.2);
+
+  color: #fca5a5;
+
+  font-size: 13px;
+}
+
+.adm-login-button {
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: #4169e1;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  transition: 0.3s;
+}
+
+.adm-login-button:hover {
+  transform: translateY(-2px);
+
+  background: #5279f5;
+
+  box-shadow: 0 10px 30px rgba(65, 105, 225, 0.25);
+}
+
+.adm-login-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.adm-login-button span {
+  font-size: 20px;
+}
+
+.adm-back {
+  width: 100%;
+
+  margin-top: 22px;
+
+  background: transparent;
+
+  border: none;
+
+  color: #64748b;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.adm-back:hover {
+  color: white;
+}
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.adm-dashboard {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at 80% 0%, rgba(44, 83, 200, 0.12), transparent 30%),
+    #020617;
+
+  color: white;
+
+  font-family: Inter, Arial, sans-serif;
+}
+
+.adm-header {
+  height: 75px;
+
+  padding: 0 5%;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(2, 6, 23, 0.8);
+
+  backdrop-filter: blur(20px);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+}
+
+.adm-header-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+.adm-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #94a3b8;
+
+  font-size: 13px;
+}
+
+.adm-status span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.8);
+}
+
+.adm-logout {
+  padding: 9px 16px;
+
+  background: transparent;
+
+  color: #cbd5e1;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.adm-logout:hover {
+  background: rgba(255, 255, 255, 0.06);
+
+  color: white;
+}
+
+.adm-main {
+  width: min(1400px, 90%);
+
+  margin: auto;
+
+  padding: 70px 0;
+}
+
+.adm-title-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 30px;
+
+  margin-bottom: 40px;
+}
+
+.adm-title-row h1 {
+  margin: 0 0 10px;
+
+  font-size: 42px;
+
+  letter-spacing: -1.5px;
+}
+
+.adm-title-row p {
+  margin: 0;
+
+  color: #64748b;
+}
+
+.adm-stat {
+  min-width: 130px;
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  background: rgba(15, 30, 65, 0.7);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  text-align: center;
+}
+
+.adm-stat span {
+  display: block;
+
+  font-size: 30px;
+
+  font-weight: 800;
+}
+
+.adm-stat small {
+  color: #64748b;
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+.adm-table-card {
+  background: rgba(7, 17, 40, 0.8);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2);
+}
+
+.adm-table-header {
+  padding: 24px 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.adm-table-header h2 {
+  margin: 0;
+
+  font-size: 17px;
+}
+
+.adm-refresh {
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: #cbd5e1;
+
+  border-radius: 8px;
+
+  padding: 8px 13px;
+
+  cursor: pointer;
+}
+
+.adm-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.adm-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 1100px;
+}
+
+.adm-table th {
+  padding: 16px 20px;
+
+  text-align: left;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  color: #64748b;
+
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.adm-table td {
+  padding: 18px 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+  color: #cbd5e1;
+
+  font-size: 13px;
+
+  vertical-align: middle;
+}
+
+.adm-table tbody tr {
+  transition: 0.2s;
+}
+
+.adm-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+/* CUSTOMER */
+
+.adm-customer {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.adm-avatar {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 10px;
+
+  background: rgba(65, 105, 225, 0.15);
+
+  color: #7fa0ff;
+
+  font-weight: 700;
+}
+
+.adm-customer strong {
+  display: block;
+
+  color: white;
+
+  margin-bottom: 4px;
+}
+
+.adm-customer small {
+  color: #64748b;
+}
+
+.adm-contact span {
+  display: block;
+
+  margin-bottom: 5px;
+}
+
+.adm-contact small {
+  color: #64748b;
+}
+
+.adm-service {
+  padding: 6px 10px;
+
+  border-radius: 6px;
+
+  background: rgba(65, 105, 225, 0.1);
+
+  color: #8da8ff;
+
+  font-size: 11px;
+}
+
+.adm-message {
+  max-width: 230px;
+
+  color: #94a3b8;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.adm-date {
+  white-space: nowrap;
+
+  color: #64748b;
+}
+
+.adm-delete {
+  border: 1px solid rgba(239, 68, 68, 0.15);
+
+  background: rgba(239, 68, 68, 0.07);
+
+  color: #f87171;
+
+  padding: 7px 11px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.adm-delete:hover {
+  background: rgba(239, 68, 68, 0.15);
+
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+/* EMPTY */
+
+.adm-empty {
+  padding: 100px 20px;
+
+  text-align: center;
+
+  color: #64748b;
+}
+
+.adm-empty-icon {
+  font-size: 40px;
+
+  color: #334155;
+
+  margin-bottom: 10px;
+}
+
+.adm-empty h3 {
+  color: #cbd5e1;
+
+  margin: 10px 0;
+}
+
+.adm-empty p {
+  margin: 0;
+}
+
+.adm-loader {
+  width: 25px;
+  height: 25px;
+
+  border: 3px solid rgba(255, 255, 255, 0.1);
+
+  border-top-color: #5c8cff;
+
+  border-radius: 50%;
+
+  animation: adm-spin 0.8s linear infinite;
+
+  margin: auto auto 15px;
+}
+
+@keyframes adm-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .adm-login-card {
+    padding: 30px 22px;
+  }
+
+  .adm-login-heading h1 {
+    font-size: 30px;
+  }
+
+  .adm-header {
+    padding: 0 20px;
+  }
+
+  .adm-main {
+    width: calc(100% - 30px);
+
+    padding: 45px 0;
+  }
+
+  .adm-title-row {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .adm-title-row h1 {
+    font-size: 32px;
+  }
+
+  .adm-stat {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+  .adm-status {
+    display: none;
+  }
+}

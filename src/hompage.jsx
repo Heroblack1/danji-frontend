@@ -70,110 +70,196 @@ const Hompage = () => {
   return (
     <>
       <section className="overall">
-        <div id="oops">
-          <video id="vid" autoPlay loop muted playsInline>
-            <source src={videoSrc} type="video/mp4" />
-          </video>
-
-          <nav
-            className={`nxnav ${
-              showNavbar ? "nxnav-visible" : "nxnav-hidden"
-            } ${scrolled ? "nxnav-scrolled" : ""}`}
+        <nav
+          className={`nxnav ${
+            showNavbar ? "nxnav-visible" : "nxnav-hidden"
+          } ${scrolled ? "nxnav-scrolled" : ""}`}
+        >
+          {/* LOGO */}
+          <button
+            className="nxnav-logo"
+            onClick={() => navigate("/")}
+            aria-label="Home"
           >
-            {/* LOGO */}
-            <button
-              className="nxnav-logo"
-              onClick={() => navigate("/")}
-              aria-label="Home"
-            >
-              <img
-                src={danji}
-                alt="Company Logo"
-                className="nxnav-logo-image"
-              />
+            <img src={danji} alt="Company Logo" className="nxnav-logo-image" />
+          </button>
+
+          {/* NAVIGATION */}
+          <div className="nxnav-menu">
+            {/* SERVICES */}
+            <div className="nxnav-dropdown">
+              <button className="nxnav-item">
+                Services
+                <span className="nxnav-chevron">⌄</span>
+              </button>
+
+              <div className="nxnav-dropdown-menu">
+                <a href="#chatbots" className="nxnav-dropdown-link">
+                  <span className="nxnav-icon">✦</span>
+                  <span>
+                    <strong>AI Chatbots</strong>
+                    <small>Intelligent business automation</small>
+                  </span>
+                </a>
+
+                <a href="#software" className="nxnav-dropdown-link">
+                  <span className="nxnav-icon">⌘</span>
+                  <span>
+                    <strong>Software Development</strong>
+                    <small>Custom digital solutions</small>
+                  </span>
+                </a>
+
+                <a href="#annotation" className="nxnav-dropdown-link">
+                  <span className="nxnav-icon">◆</span>
+                  <span>
+                    <strong>Data Annotation</strong>
+                    <small>High-quality AI training data</small>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            {/* NORMAL LINKS */}
+            <button className="nxnav-item" onClick={() => navigate("/pricing")}>
+              Pricing
             </button>
 
-            {/* NAVIGATION */}
-            <div className="nxnav-menu">
-              {/* SERVICES */}
-              <div className="nxnav-dropdown">
-                <button className="nxnav-item">
-                  Services
-                  <span className="nxnav-chevron">⌄</span>
-                </button>
+            <button className="nxnav-item" onClick={() => navigate("/contact")}>
+              Contact
+            </button>
 
-                <div className="nxnav-dropdown-menu">
-                  <a href="#chatbots" className="nxnav-dropdown-link">
-                    <span className="nxnav-icon">✦</span>
-                    <span>
-                      <strong>AI Chatbots</strong>
-                      <small>Intelligent business automation</small>
-                    </span>
-                  </a>
+            <button className="nxnav-item" onClick={() => navigate("/about")}>
+              About
+            </button>
 
-                  <a href="#software" className="nxnav-dropdown-link">
-                    <span className="nxnav-icon">⌘</span>
-                    <span>
-                      <strong>Software Development</strong>
-                      <small>Custom digital solutions</small>
-                    </span>
-                  </a>
+            {/* CTA */}
+            <button
+              className="nxnav-cta"
+              onClick={() => navigate("/getStarted")}
+            >
+              <span>Get Started</span>
+              <span className="nxnav-arrow">→</span>
+            </button>
+          </div>
+        </nav>
+        <div className="dt-hero">
+          {/* Animated background */}
+          <div className="dt-hero-grid"></div>
 
-                  <a href="#annotation" className="nxnav-dropdown-link">
-                    <span className="nxnav-icon">◆</span>
-                    <span>
-                      <strong>Data Annotation</strong>
-                      <small>High-quality AI training data</small>
-                    </span>
-                  </a>
-                </div>
+          <div className="dt-hero-orb dt-orb-one"></div>
+          <div className="dt-hero-orb dt-orb-two"></div>
+          <div className="dt-hero-orb dt-orb-three"></div>
+
+          {/* Animated AI visual */}
+          <div className="dt-ai-visual">
+            <div className="dt-ai-ring dt-ring-one"></div>
+            <div className="dt-ai-ring dt-ring-two"></div>
+            <div className="dt-ai-ring dt-ring-three"></div>
+
+            <div className="dt-ai-core">
+              <div className="dt-ai-core-inner">
+                <span>AI</span>
               </div>
-
-              {/* NORMAL LINKS */}
-              <button
-                className="nxnav-item"
-                onClick={() => navigate("/pricing")}
-              >
-                Pricing
-              </button>
-
-              <button
-                className="nxnav-item"
-                onClick={() => navigate("/contact")}
-              >
-                Contact
-              </button>
-
-              <button className="nxnav-item" onClick={() => navigate("/about")}>
-                About
-              </button>
-
-              {/* CTA */}
-              <button
-                className="nxnav-cta"
-                onClick={() => navigate("/getStarted")}
-              >
-                <span>Get Started</span>
-                <span className="nxnav-arrow">→</span>
-              </button>
             </div>
-          </nav>
-          <div className="intro">
-            <h1 className="boldWhite">
-              AI That works. Software That Scales. Data You Can Trust
+
+            {/* Nodes */}
+            <div className="dt-ai-node dt-node-one"></div>
+            <div className="dt-ai-node dt-node-two"></div>
+            <div className="dt-ai-node dt-node-three"></div>
+            <div className="dt-ai-node dt-node-four"></div>
+            <div className="dt-ai-node dt-node-five"></div>
+
+            {/* Connection lines */}
+            <div className="dt-ai-line dt-line-one"></div>
+            <div className="dt-ai-line dt-line-two"></div>
+            <div className="dt-ai-line dt-line-three"></div>
+            <div className="dt-ai-line dt-line-four"></div>
+
+            {/* Floating cards */}
+            <div className="dt-floating-card dt-card-one">
+              <span className="dt-card-icon">✦</span>
+              <div>
+                <strong>AI Chatbots</strong>
+                <small>Always learning</small>
+              </div>
+            </div>
+
+            <div className="dt-floating-card dt-card-two">
+              <span className="dt-card-icon">◆</span>
+              <div>
+                <strong>Data</strong>
+                <small>99.8% accuracy</small>
+              </div>
+            </div>
+
+            <div className="dt-floating-card dt-card-three">
+              <span className="dt-card-icon">⌘</span>
+              <div>
+                <strong>Software</strong>
+                <small>Built to scale</small>
+              </div>
+            </div>
+          </div>
+
+          {/* Hero content */}
+          <div className="dt-hero-content">
+            <span className="dt-hero-label">
+              <span></span>
+              AI • SOFTWARE • DATA
+            </span>
+
+            <h1>
+              AI That Works.
+              <br />
+              <span>Software That Scales.</span>
+              <br />
+              Data You Can Trust.
             </h1>
-            <p className="smallWhite">
-              We help businesses auttomate customer interactions, build modern
-              web applications, and create high-quality datasets for AI systems
+
+            <p>
+              We help businesses automate customer interactions, build modern
+              web applications, and create high-quality datasets for AI systems.
             </p>
 
-            <ul>
-              <li className="smallWhite">AI Chatbot Solutions</li>
-              <li className="smallWhite">Customer Software Development</li>
-              <li className="smallWhite">Data annotation Services</li>
-            </ul>
+            <div className="dt-hero-services">
+              <div>
+                <span>✦</span>
+                AI Chatbot Solutions
+              </div>
 
-            <button className="floating-btn">Book a free consultation</button>
+              <div>
+                <span>⌘</span>
+                Custom Software Development
+              </div>
+
+              <div>
+                <span>◆</span>
+                Data Annotation Services
+              </div>
+            </div>
+
+            <div className="dt-hero-buttons">
+              <button
+                className="dt-hero-primary"
+                onClick={() => navigate("/getStarted")}
+              >
+                Get Started
+                <span>→</span>
+              </button>
+
+              <button
+                className="dt-hero-secondary"
+                onClick={() => navigate("/contact")}
+              >
+                Book a Consultation
+              </button>
+            </div>
+          </div>
+
+          <div className="dt-scroll">
+            <span></span>
+            Scroll to explore
           </div>
         </div>
 

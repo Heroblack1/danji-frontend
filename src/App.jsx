@@ -12,6 +12,7 @@ import GetStarted from "./getStarted";
 import AIChatbot from "./aiChatbot";
 import SoftwareDevelopment from "./softwareDevelopment";
 import DataAnnotation from "./dataAnnotation";
+import Admin from "./admin";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,6 +28,7 @@ function App() {
         <Route path="/aiChatbot" element={<AIChatbot />} />
         <Route path="/softwareDevelopment" element={<SoftwareDevelopment />} />
         <Route path="/dataAnnotation" element={<DataAnnotation />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </>
   );
