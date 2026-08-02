@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 src/assets/320732.mp4
 node_modules
+.env
