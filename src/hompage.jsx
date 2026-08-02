@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import videoSrc from "./assets/320732.mp4";
 import imgeSrc from "./assets/Gemini_Generated_Image_e2cvxve2cvxve2cv.png";
 import imgeSrc1 from "./assets/Gemini_Generated_Image_8qniiz8qniiz8qni.jpg";
 import imgeSrc2 from "./assets/Gemini_Generated_Image_zheoyxzheoyxzheo.jpg";
