@@ -100,7 +100,7 @@ const AIChatbot = () => {
             </button>
 
             <div className="nxnav-dropdown-menu">
-              <a href="#chatbots" className="nxnav-dropdown-link">
+              <a className="nxnav-dropdown-link">
                 <span className="nxnav-icon">✦</span>
                 <span>
                   <strong>AI Chatbots</strong>
@@ -108,7 +108,7 @@ const AIChatbot = () => {
                 </span>
               </a>
 
-              <a href="#software" className="nxnav-dropdown-link">
+              <a className="nxnav-dropdown-link">
                 <span className="nxnav-icon">⌘</span>
                 <span>
                   <strong>Software Development</strong>
@@ -116,7 +116,7 @@ const AIChatbot = () => {
                 </span>
               </a>
 
-              <a href="#annotation" className="nxnav-dropdown-link">
+              <a className="nxnav-dropdown-link">
                 <span className="nxnav-icon">◆</span>
                 <span>
                   <strong>Data Annotation</strong>
