@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import danji from "./assets/ChatGPT Image Jul 4, 2026, 06_12_53 PM.png";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const navigate = useNavigate();

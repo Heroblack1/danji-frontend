@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 // import "./GetStarted.css";
 import danji from "./assets/ChatGPT Image Jul 4, 2026, 06_12_53 PM.png";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const GetStarted = () => {
   const revealRefs = useRef([]);
