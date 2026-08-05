@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import danji from "./assets/ChatGPT Image Jul 4, 2026, 06_12_53 PM.png";
+import { useNavigate } from "react-router-dom";
+
 // import "./AIChatbot.css";
 
 const AIChatbot = () => {
@@ -7,6 +10,7 @@ const AIChatbot = () => {
 
   const [showNavbar, setShowNavbar] = useState(true);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
