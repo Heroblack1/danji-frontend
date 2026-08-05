@@ -307,7 +307,13 @@ function Admin() {
                       <td>{contact.budget || "—"}</td>
 
                       <td>
-                        <div className="adm-message">{contact.message}</div>
+                        <div className="adm-message-wrapper">
+                          <div className="adm-message">{contact.message}</div>
+
+                          <div className="adm-message-tooltip">
+                            {contact.message}
+                          </div>
+                        </div>
                       </td>
 
                       <td>

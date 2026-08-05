@@ -101,8 +101,8 @@ const Hompage = () => {
                   </span>
                 </Link>
 
-                <a
-                  href="#software"
+                <Link
+                  to="softwareDevelopment"
                   className="nxnav-dropdown-link"
                   href="#chatbots"
                   className="nxnav-dropdown-link"
@@ -116,10 +116,10 @@ const Hompage = () => {
                     <strong>Software Development</strong>
                     <small>Custom digital solutions</small>
                   </span>
-                </a>
+                </Link>
 
-                <a
-                  href="#annotation"
+                <Link
+                  to="dataAnnotation"
                   className="nxnav-dropdown-link"
                   onClick={(e) => {
                     e.preventDefault();
@@ -131,7 +131,7 @@ const Hompage = () => {
                     <strong>Data Annotation</strong>
                     <small>High-quality AI training data</small>
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
 
