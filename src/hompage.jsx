@@ -3,7 +3,7 @@ import imgeSrc from "./assets/Gemini_Generated_Image_e2cvxve2cvxve2cv.png";
 import imgeSrc1 from "./assets/Gemini_Generated_Image_8qniiz8qniiz8qni.jpg";
 import imgeSrc2 from "./assets/Gemini_Generated_Image_zheoyxzheoyxzheo.jpg";
 import danji from "./assets/ChatGPT Image Jul 4, 2026, 06_12_53 PM.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Hompage = () => {
   const navigate = useNavigate();
@@ -93,15 +93,24 @@ const Hompage = () => {
               </button>
 
               <div className="nxnav-dropdown-menu">
-                <a href="#chatbots" className="nxnav-dropdown-link">
+                <Link className="nxnav-dropdown-link" to="/aiChatbot">
                   <span className="nxnav-icon">✦</span>
                   <span>
                     <strong>AI Chatbots</strong>
                     <small>Intelligent business automation</small>
                   </span>
-                </a>
+                </Link>
 
-                <a href="#software" className="nxnav-dropdown-link">
+                <a
+                  href="#software"
+                  className="nxnav-dropdown-link"
+                  href="#chatbots"
+                  className="nxnav-dropdown-link"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/softwareDevelopment");
+                  }}
+                >
                   <span className="nxnav-icon">⌘</span>
                   <span>
                     <strong>Software Development</strong>
@@ -109,7 +118,14 @@ const Hompage = () => {
                   </span>
                 </a>
 
-                <a href="#annotation" className="nxnav-dropdown-link">
+                <a
+                  href="#annotation"
+                  className="nxnav-dropdown-link"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/dataAnnotation");
+                  }}
+                >
                   <span className="nxnav-icon">◆</span>
                   <span>
                     <strong>Data Annotation</strong>
@@ -431,47 +447,91 @@ const Hompage = () => {
           </div>
         </section>
 
-        <footer className="footer">
-          <div className="footer-content">
-            <div className="footer-logo">
-              <h2>DanjiTech</h2>
+        <footer className="ptx-footer">
+          <div className="ptx-footer-glow"></div>
+
+          <div className="ptx-footer-container">
+            {/* BRAND */}
+            <div className="ptx-footer-brand">
+              <div className="ptx-footer-brand-name">
+                <span className="ptx-footer-dot"></span>
+                DanjiTech
+              </div>
+
               <p>
-                Building AI chatbots, modern websites, and providing
-                professional data annotation services.
+                Building intelligent AI solutions, scalable software, and
+                high-quality data annotation services for modern businesses.
               </p>
+
+              <button
+                className="ptx-footer-cta"
+                onClick={() => navigate("/getStarted")}
+              >
+                Start a Project
+                <span>→</span>
+              </button>
             </div>
 
-            <div className="footer-column">
-              <h3>Quick Links</h3>
-              <a href="#home">Home</a>
-              <a href="#services">Services</a>
-              <a href="#projects">Portfolio</a>
-              <a href="#contact">Contact</a>
+            {/* COMPANY */}
+            <div className="ptx-footer-column">
+              <h3>Company</h3>
+
+              <a href="/">Home</a>
+
+              <a href="/about">About Us</a>
+
+              <a href="/pricing">Pricing</a>
+
+              <a href="/contact">Contact</a>
             </div>
 
-            <div className="footer-column">
+            {/* SERVICES */}
+            <div className="ptx-footer-column">
               <h3>Services</h3>
-              <p>AI Chatbots</p>
-              <p>Web Development</p>
-              <p>Data Annotation</p>
-              <p>Consulting</p>
+
+              <a href="#chatbots">AI Chatbots</a>
+
+              <a href="#software">Software Development</a>
+
+              <a href="#annotation">Data Annotation</a>
+
+              <a href="/getStarted">Get Started</a>
             </div>
 
-            <div className="footer-column">
-              <h3>Contact</h3>
-              <p>📧 admin@danjitech.com</p>
-              <p>📱 +234 9030877641</p>
+            {/* CONTACT */}
+            <div className="ptx-footer-column ptx-footer-contact">
+              <h3>Get in touch</h3>
 
-              <div className="social-links">
-                <a href="#">GitHub</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">X</a>
+              <a href="mailto:admin@danjitech.com">admin@danjitech.com</a>
+
+              <a href="tel:+2349030877641">+234 903 087 7641</a>
+
+              <div className="ptx-footer-socials">
+                <a href="#" aria-label="GitHub">
+                  GH
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                  in
+                </a>
+
+                <a href="#" aria-label="X">
+                  X
+                </a>
               </div>
             </div>
           </div>
 
-          <div className="footer-bottom">
-            <p>© {new Date().getFullYear()} DanjiTech. All Rights Reserved.</p>
+          {/* BOTTOM BAR */}
+
+          <div className="ptx-footer-bottom">
+            <p>© {new Date().getFullYear()} DanjiTech. All rights reserved.</p>
+
+            <div className="ptx-footer-bottom-links">
+              <a href="#">Privacy</a>
+
+              <a href="#">Terms</a>
+            </div>
           </div>
         </footer>
       </section>
