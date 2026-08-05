@@ -1,10 +1,5 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
-import "./App.css";
-import Hompage from "./hompage";
 import { Routes, Route } from "react-router-dom";
+import Hompage from "./hompage";
 import Pricing from "./pricing";
 import About from "./about";
 import Contact from "./contact";
@@ -15,22 +10,25 @@ import DataAnnotation from "./dataAnnotation";
 import Admin from "./admin";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Hompage />} />
-        <Route path="/pricing" element={<Pricing />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/getStarted" element={<GetStarted />} />
-        <Route path="/aiChatbot" element={<AIChatbot />} />
-        <Route path="/softwareDevelopment" element={<SoftwareDevelopment />} />
-        <Route path="/dataAnnotation" element={<DataAnnotation />} />
-        <Route path="/admin" element={<Admin />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<Hompage />} />
+
+      <Route path="/pricing" element={<Pricing />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/getStarted" element={<GetStarted />} />
+
+      {/* SERVICES */}
+      <Route path="/service/aiChatbot" element={<AIChatbot />} />
+      <Route
+        path="/service/softwareDevelopment"
+        element={<SoftwareDevelopment />}
+      />
+      <Route path="/service/dataAnnotation" element={<DataAnnotation />} />
+
+      <Route path="/admin" element={<Admin />} />
+    </Routes>
   );
 }
 

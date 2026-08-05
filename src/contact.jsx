@@ -181,29 +181,35 @@ const Contact = () => {
             </button>
 
             <div className="nxnav-dropdown-menu">
-              <a href="#chatbots" className="nxnav-dropdown-link">
+              <Link className="nxnav-dropdown-link" to="/service/aiChatbot">
                 <span className="nxnav-icon">✦</span>
                 <span>
                   <strong>AI Chatbots</strong>
                   <small>Intelligent business automation</small>
                 </span>
-              </a>
+              </Link>
 
-              <a href="#software" className="nxnav-dropdown-link">
+              <Link
+                className="nxnav-dropdown-link"
+                to="/service/softwareDevelopment"
+              >
                 <span className="nxnav-icon">⌘</span>
                 <span>
                   <strong>Software Development</strong>
                   <small>Custom digital solutions</small>
                 </span>
-              </a>
+              </Link>
 
-              <a href="#annotation" className="nxnav-dropdown-link">
+              <Link
+                className="nxnav-dropdown-link"
+                to="/service/dataAnnotation"
+              >
                 <span className="nxnav-icon">◆</span>
                 <span>
                   <strong>Data Annotation</strong>
                   <small>High-quality AI training data</small>
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
 

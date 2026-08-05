@@ -93,7 +93,7 @@ const Hompage = () => {
               </button>
 
               <div className="nxnav-dropdown-menu">
-                <Link className="nxnav-dropdown-link" to="/aiChatbot">
+                <Link className="nxnav-dropdown-link" to="/service/aiChatbot">
                   <span className="nxnav-icon">✦</span>
                   <span>
                     <strong>AI Chatbots</strong>
@@ -102,14 +102,8 @@ const Hompage = () => {
                 </Link>
 
                 <Link
-                  to="softwareDevelopment"
                   className="nxnav-dropdown-link"
-                  href="#chatbots"
-                  className="nxnav-dropdown-link"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    navigate("/softwareDevelopment");
-                  }}
+                  to="/service/softwareDevelopment"
                 >
                   <span className="nxnav-icon">⌘</span>
                   <span>
@@ -119,12 +113,8 @@ const Hompage = () => {
                 </Link>
 
                 <Link
-                  to="dataAnnotation"
                   className="nxnav-dropdown-link"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    navigate("/dataAnnotation");
-                  }}
+                  to="/service/dataAnnotation"
                 >
                   <span className="nxnav-icon">◆</span>
                   <span>
