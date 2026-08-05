@@ -5,6 +5,43 @@ import { Link } from "react-router-dom";
 const AIChatbot = () => {
   const revealRefs = useRef([]);
 
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Change navbar appearance after scrolling
+      setScrolled(currentScrollY > 30);
+
+      // Keep navbar visible at the very top
+      if (currentScrollY <= 80) {
+        setShowNavbar(true);
+      }
+
+      // User is scrolling down
+      else if (currentScrollY > lastScrollY) {
+        setShowNavbar(false);
+      }
+
+      // User is scrolling up
+      else {
+        setShowNavbar(true);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const addToRefs = (el) => {
     if (el && !revealRefs.current.includes(el)) {
       revealRefs.current.push(el);
