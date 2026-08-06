@@ -9845,8 +9845,10 @@ body {
     font-size: 11px;
   }
 
-  .nxnav-dropdown {
-    display: flex;
+  /* Hide Services on small screens */
+
+  .nxnav-item.about {
+    display: none;
   }
 
   .nxnav-cta {
@@ -9863,9 +9865,6 @@ body {
 
   .nxnav-arrow {
     font-size: 14px;
-  }
-  .nxnav-item.about {
-    display: none;
   }
 }
 
