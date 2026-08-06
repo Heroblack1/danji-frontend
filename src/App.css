@@ -9847,7 +9847,7 @@ body {
 
   /* Hide Services on small screens */
 
-  .nxnav-item.about {
+  .nxnav-dropdown {
     display: none;
   }
 
