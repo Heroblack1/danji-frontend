@@ -9845,10 +9845,8 @@ body {
     font-size: 11px;
   }
 
-  /* Hide Services on small screens */
-
   .nxnav-dropdown {
-    display: none;
+    display: flex;
   }
 
   .nxnav-cta {
