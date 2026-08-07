@@ -6782,7 +6782,7 @@ body {
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 70px;
+  gap: 40px;
 
   align-items: center;
 }
@@ -6868,7 +6868,7 @@ body {
 
 .sd-trust-row {
   display: flex;
-
+  flex-wrap: wrap;
   gap: 35px;
 
   margin-top: 55px;
@@ -7793,17 +7793,35 @@ body {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 850px) {
   .sd-hero {
-    min-height: auto;
-
-    padding: 100px 20px 80px;
+    padding: 80px 25px 60px;
   }
 
   .sd-hero h1 {
-    font-size: 50px;
+    font-size: 3rem;
+    line-height: 1.15;
+  }
 
-    letter-spacing: -3px;
+  .sd-code-visual {
+    min-height: 350px;
+  }
+
+  .sd-hero-container {
+    gap: 35px;
+  }
+}
+
+@media (max-width: 650px) {
+  .sd-hero {
+    min-height: auto;
+    padding: 70px 20px 50px;
+  }
+
+  .sd-hero h1 {
+    font-size: clamp(2rem, 7vw, 3rem);
+    line-height: 1.15;
+    letter-spacing: -1px;
   }
 
   .sd-hero p {
@@ -7815,11 +7833,13 @@ body {
   }
 
   .sd-code-visual {
-    min-height: 450px;
+    min-height: auto;
   }
 
   .sd-code-window {
-    max-width: 100%;
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
   }
 
   .sd-floating-tag {
@@ -7883,6 +7903,13 @@ body {
     font-size: 47px;
 
     letter-spacing: -2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sd-code-window {
+    transform: scale(0.88);
+    transform-origin: top center;
   }
 }
 
