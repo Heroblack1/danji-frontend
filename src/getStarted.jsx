@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 // import "./GetStarted.css";
 import danji from "./assets/ChatGPT Image Jul 4, 2026, 06_12_53 PM.png";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { NavLink, Link, useNavigate, useLocation } from "react-router-dom";
 
 const GetStarted = () => {
   const revealRefs = useRef([]);
   const [submitted, setSubmitted] = useState(false);
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   // scrolling options
   // scrolling options
@@ -170,7 +170,11 @@ const GetStarted = () => {
         <div className="nxnav-menu">
           {/* SERVICES */}
           <div className="nxnav-dropdown">
-            <button className="nxnav-item">
+            <button
+              className={`nxnav-item ${
+                location.pathname.startsWith("/service") ? "nxnav-active" : ""
+              }`}
+            >
               Services
               <span className="nxnav-chevron">⌄</span>
             </button>
@@ -209,17 +213,32 @@ const GetStarted = () => {
           </div>
 
           {/* NORMAL LINKS */}
-          <button className="nxnav-item" onClick={() => navigate("/pricing")}>
+          <NavLink
+            to="/pricing"
+            className={({ isActive }) =>
+              `nxnav-item ${isActive ? "nxnav-active" : ""}`
+            }
+          >
             Pricing
-          </button>
+          </NavLink>
 
-          <button className="nxnav-item" onClick={() => navigate("/contact")}>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `nxnav-item ${isActive ? "nxnav-active" : ""}`
+            }
+          >
             Contact
-          </button>
+          </NavLink>
 
-          <button className="nxnav-item" onClick={() => navigate("/about")}>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `nxnav-item ${isActive ? "nxnav-active" : ""}`
+            }
+          >
             About
-          </button>
+          </NavLink>
 
           {/* CTA */}
           <button className="nxnav-cta" onClick={() => navigate("/getStarted")}>

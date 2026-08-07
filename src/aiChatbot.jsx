@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import danji from "./assets/ChatGPT Image Jul 4, 2026, 06_12_53 PM.png";
-import { useNavigate } from "react-router-dom";
+import { NavLink, Link, useNavigate, useLocation } from "react-router-dom";
 
 // import "./AIChatbot.css";
 
 const AIChatbot = () => {
   const revealRefs = useRef([]);
+  const location = useLocation();
 
   const [showNavbar, setShowNavbar] = useState(true);
   const [scrolled, setScrolled] = useState(false);
@@ -94,7 +95,11 @@ const AIChatbot = () => {
         <div className="nxnav-menu">
           {/* SERVICES */}
           <div className="nxnav-dropdown">
-            <button className="nxnav-item">
+            <button
+              className={`nxnav-item ${
+                location.pathname.startsWith("/service") ? "nxnav-active" : ""
+              }`}
+            >
               Services
               <span className="nxnav-chevron">⌄</span>
             </button>
@@ -133,17 +138,32 @@ const AIChatbot = () => {
           </div>
 
           {/* NORMAL LINKS */}
-          <button className="nxnav-item" onClick={() => navigate("/pricing")}>
+          <NavLink
+            to="/pricing"
+            className={({ isActive }) =>
+              `nxnav-item ${isActive ? "nxnav-active" : ""}`
+            }
+          >
             Pricing
-          </button>
+          </NavLink>
 
-          <button className="nxnav-item" onClick={() => navigate("/contact")}>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `nxnav-item ${isActive ? "nxnav-active" : ""}`
+            }
+          >
             Contact
-          </button>
+          </NavLink>
 
-          <button className="nxnav-item" onClick={() => navigate("/about")}>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `nxnav-item ${isActive ? "nxnav-active" : ""}`
+            }
+          >
             About
-          </button>
+          </NavLink>
 
           {/* CTA */}
           <button className="nxnav-cta" onClick={() => navigate("/getStarted")}>

@@ -3,10 +3,11 @@ import imgeSrc from "./assets/Gemini_Generated_Image_e2cvxve2cvxve2cv.png";
 import imgeSrc1 from "./assets/Gemini_Generated_Image_8qniiz8qniiz8qni.jpg";
 import imgeSrc2 from "./assets/Gemini_Generated_Image_zheoyxzheoyxzheo.jpg";
 import danji from "./assets/ChatGPT Image Jul 4, 2026, 06_12_53 PM.png";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, Link, useNavigate, useLocation } from "react-router-dom";
 
 const Hompage = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [showNavbar, setShowNavbar] = useState(true);
   const [scrolled, setScrolled] = useState(false);
@@ -87,7 +88,11 @@ const Hompage = () => {
           <div className="nxnav-menu">
             {/* SERVICES */}
             <div className="nxnav-dropdown">
-              <button className="nxnav-item">
+              <button
+                className={`nxnav-item ${
+                  location.pathname.startsWith("/service") ? "nxnav-active" : ""
+                }`}
+              >
                 Services
                 <span className="nxnav-chevron">⌄</span>
               </button>
@@ -126,17 +131,32 @@ const Hompage = () => {
             </div>
 
             {/* NORMAL LINKS */}
-            <button className="nxnav-item" onClick={() => navigate("/pricing")}>
+            <NavLink
+              to="/pricing"
+              className={({ isActive }) =>
+                `nxnav-item ${isActive ? "nxnav-active" : ""}`
+              }
+            >
               Pricing
-            </button>
+            </NavLink>
 
-            <button className="nxnav-item" onClick={() => navigate("/contact")}>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                `nxnav-item ${isActive ? "nxnav-active" : ""}`
+              }
+            >
               Contact
-            </button>
+            </NavLink>
 
-            <button className="nxnav-item" onClick={() => navigate("/about")}>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `nxnav-item ${isActive ? "nxnav-active" : ""}`
+              }
+            >
               About
-            </button>
+            </NavLink>
 
             {/* CTA */}
             <button
