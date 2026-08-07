@@ -462,9 +462,9 @@ const About = () => {
               <li>Custom AI assistants</li>
             </ul>
 
-            <a href="/services/chatbot">
+            <Link to="/service/aiChatbot">
               Explore service <span>→</span>
-            </a>
+            </Link>
           </div>
 
           <div
