@@ -9252,6 +9252,44 @@ body {
   }
 }
 
+/* tablets */
+
+@media (max-width: 992px) {
+  .da-visual {
+    width: 100%;
+    max-width: 500px;
+    min-height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+  .da-visual {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    padding: 0;
+    margin: 20px auto 0;
+    overflow: hidden;
+  }
+
+  .da-annotation-window {
+    width: 100%;
+    max-width: 340px;
+    transform: scale(0.85);
+    transform-origin: top center;
+    margin: 0 auto;
+  }
+
+  .da-floating-card {
+    display: none;
+  }
+}
+
 @media (max-width: 650px) {
   .da-hero {
     min-height: auto;
@@ -9350,6 +9388,14 @@ body {
     font-size: 47px;
 
     letter-spacing: -2px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .da-annotation-window {
+    max-width: 300px;
+    transform: scale(0.75);
   }
 }
 
