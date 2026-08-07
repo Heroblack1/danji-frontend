@@ -9527,6 +9527,10 @@ body {
   transition: width 0.3s ease;
 }
 
+.nxnav-active::after {
+  width: 100%;
+}
+
 /* Hover */
 .nxnav-item:hover::after {
   width: 100%;
