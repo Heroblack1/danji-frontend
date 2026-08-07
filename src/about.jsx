@@ -1,11 +1,11 @@
 import { useEffect, useState, useRef } from "react";
 import React from "react";
 import danji from "./assets/ChatGPT Image Jul 4, 2026, 06_12_53 PM.png";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { NavLink, Link, useNavigate, useLocation } from "react-router-dom";
 
 const About = () => {
   const revealRefs = useRef([]);
+  const location = useLocation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -96,7 +96,11 @@ const About = () => {
         <div className="nxnav-menu">
           {/* SERVICES */}
           <div className="nxnav-dropdown">
-            <button className="nxnav-item">
+            <button
+              className={`nxnav-item ${
+                location.pathname.startsWith("/service") ? "nxnav-active" : ""
+              }`}
+            >
               Services
               <span className="nxnav-chevron">⌄</span>
             </button>
@@ -135,9 +139,14 @@ const About = () => {
           </div>
 
           {/* NORMAL LINKS */}
-          <button className="nxnav-item" onClick={() => navigate("/pricing")}>
+          <NavLink
+            to="/pricing"
+            className={({ isActive }) =>
+              `nxnav-item ${isActive ? "nxnav-active" : ""}`
+            }
+          >
             Pricing
-          </button>
+          </NavLink>
 
           <button className="nxnav-item" onClick={() => navigate("/contact")}>
             Contact

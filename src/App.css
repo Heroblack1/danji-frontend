@@ -9501,6 +9501,41 @@ body {
   filter: drop-shadow(0 0 14px rgba(66, 184, 255, 0.6));
 }
 
+/* underline when active */
+
+.nxnav-item {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px 0;
+  transition: 0.3s;
+}
+
+/* underline animation */
+.nxnav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 3px;
+  background: white;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+/* Hover */
+.nxnav-item:hover::after {
+  width: 100%;
+}
+
+/* Active page */
+.nxnav-active::after {
+  width: 100%;
+}
 /* =========================================================
    NAVIGATION MENU
 ========================================================= */
