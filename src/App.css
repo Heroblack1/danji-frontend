@@ -1825,106 +1825,161 @@ body {
 
 /* responsive */
 
-@media (max-width: 950px) {
-  /* .navbar {
-    flex-direction: column;
-    gap: 15px;
-
-    padding: 20px;
+/* ============================
+   TABLETS
+============================ */
+@media (max-width: 1050px) {
+  .da-hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
   }
 
-  .lincon {
-    flex-wrap: wrap;
+  .da-hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
 
+  .da-label,
+  .da-hero-actions,
+  .da-trust-row {
     justify-content: center;
-
-    gap: 18px;
   }
 
-  .link {
-    margin: 0;
-  } */
-  .annotation-container {
-    grid-template-columns: 1fr;
-
-    text-align: center;
+  .da-hero p {
+    margin: 0 auto;
+    max-width: 650px;
   }
 
-  .annotation-title {
-    font-size: 42px;
-  }
-
-  .annotation-img {
-    max-width: 340px;
-  }
-
-  .annotation-grid {
-    grid-template-columns: 1fr;
-  }
-}
-@media (max-width: 992px) {
-  .software-container,
-  .annotation-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .feature-grid,
-  .software-grid,
-  .annotation-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .chatbot-title,
-  .software-title,
-  .annotation-title {
-    font-size: clamp(2.2rem, 8vw, 3rem);
-  }
-
-  .chatbot-description,
-  .software-description,
-  .annotation-description {
-    font-size: 1rem;
-  }
-
-  .software-image-box,
-  .annotation-image {
-    order: -1;
-  }
-}
-@media (max-width: 768px) {
-  .intro {
-    max-width: 100%;
-
-    padding: 130px 30px 60px;
-
-    text-align: center;
-
+  .da-visual {
+    min-height: 380px;
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
 
-  /* .intro ul {
-    text-align: left;
+  .da-annotation-window {
+    width: 100%;
+    max-width: 480px;
+  }
+}
+
+/* ============================
+   LARGE PHONES
+============================ */
+@media (max-width: 850px) {
+  .da-hero {
+    min-height: auto;
+    padding: 80px 25px 60px;
   }
 
-  .navbar {
-    flex-direction: column;
-
-    gap: 15px;
-
-    padding: 20px;
+  .da-hero-container {
+    gap: 30px;
   }
 
-  .lincon {
+  .da-hero h1 {
+    font-size: clamp(2.2rem, 7vw, 3.2rem);
+    line-height: 1.15;
+    letter-spacing: -1px;
+  }
+
+  .da-hero p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .da-visual {
+    min-height: 340px;
+  }
+
+  .da-trust-row {
     flex-wrap: wrap;
-
+    gap: 18px;
     justify-content: center;
+  }
+}
 
+/* ============================
+   PHONES
+============================ */
+@media (max-width: 650px) {
+  .da-hero {
+    min-height: auto;
+    padding: 70px 20px 50px;
+  }
+
+  .da-hero-container {
+    gap: 25px;
+  }
+
+  .da-hero h1 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    line-height: 1.15;
+    letter-spacing: -1px;
+  }
+
+  .da-hero p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .da-hero-actions {
+    flex-direction: column;
+    align-items: center;
     gap: 15px;
-  } */
+  }
 
-  .dropdown-content {
-    min-width: 210px;
+  .da-primary-button,
+  .da-secondary-button {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+
+  .da-trust-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .da-visual {
+    min-height: auto;
+  }
+
+  .da-annotation-window {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .da-floating-card {
+    display: none;
+  }
+}
+
+/* ============================
+   SMALL PHONES
+============================ */
+@media (max-width: 480px) {
+  .da-hero {
+    padding: 60px 16px 40px;
+  }
+
+  .da-hero h1 {
+    font-size: 2rem;
+  }
+
+  .da-label {
+    font-size: 0.75rem;
+  }
+
+  .da-annotation-window {
+    transform: scale(0.9);
+    transform-origin: top center;
+  }
+
+  .da-trust-row {
+    grid-template-columns: 1fr;
   }
 }
 /* About page styling */
