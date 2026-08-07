@@ -148,13 +148,23 @@ const About = () => {
             Pricing
           </NavLink>
 
-          <button className="nxnav-item" onClick={() => navigate("/contact")}>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `nxnav-item ${isActive ? "nxnav-active" : ""}`
+            }
+          >
             Contact
-          </button>
+          </NavLink>
 
-          <button className="nxnav-item" onClick={() => navigate("/about")}>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `nxnav-item ${isActive ? "nxnav-active" : ""}`
+            }
+          >
             About
-          </button>
+          </NavLink>
 
           {/* CTA */}
           <button className="nxnav-cta" onClick={() => navigate("/getStarted")}>
