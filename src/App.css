@@ -9517,12 +9517,12 @@ body {
 /* underline animation */
 
 .nxnav-active {
-  color: yellow !important;
+  color: blue !important;
 }
 
 .nxnav-active::after {
   width: 100% !important;
-  background: red !important;
+  background: white !important;
 }
 .nxnav-item::after {
   content: "";
