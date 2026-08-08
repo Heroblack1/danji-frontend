@@ -221,7 +221,7 @@ function Pricing() {
               ))}
             </ul>
 
-            <button nClick={() => navigate("/getStarted")}>
+            <button onClick={() => navigate("/getStarted")}>
               {plan.button}
             </button>
           </div>
