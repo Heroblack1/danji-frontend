@@ -202,7 +202,7 @@ const SoftwareDevelopment = () => {
             </p>
 
             <div className="sd-hero-actions">
-              <Link to="/get-started" className="sd-primary-button">
+              <Link to="/getStarted" className="sd-primary-button">
                 Start Your Project
                 <span>→</span>
               </Link>
@@ -749,7 +749,7 @@ const SoftwareDevelopment = () => {
             we're ready to help.
           </p>
 
-          <Link to="/get-started" className="sd-primary-button sd-large-button">
+          <Link to="/getStarted" className="sd-primary-button sd-large-button">
             Get Started
             <span>→</span>
           </Link>
