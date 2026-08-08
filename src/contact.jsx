@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 // import "./Contact.css";
 // import { useNavigate } from "react-router-dom";
-import danji from "./assets/ChatGPT Image Jul 4, 2026, 06_12_53 PM.png";
+import danji from "./assets/logo.png";
 import axios from "axios";
 import { NavLink, Link, useNavigate, useLocation } from "react-router-dom";
 
