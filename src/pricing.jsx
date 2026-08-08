@@ -7,7 +7,7 @@ const pricingPlans = [
   {
     id: 1,
     title: "Data Annotation",
-    price: "Starting at $500",
+    price: "Starting at $12/hr per Agent",
     description:
       "High-quality image, text, audio, and video annotation tailored to your AI projects.",
     features: [
