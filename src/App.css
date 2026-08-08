@@ -9480,6 +9480,7 @@ body {
   background: transparent;
 
   cursor: pointer;
+  border-radius: 10%;
 }
 
 .nxnav-logo-image {
