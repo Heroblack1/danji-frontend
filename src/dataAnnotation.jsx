@@ -200,7 +200,7 @@ const DataAnnotation = () => {
             </p>
 
             <div className="da-hero-actions">
-              <Link to="/get-started" className="da-primary-button">
+              <Link to="/getStarted" className="da-primary-button">
                 Get Started
                 <span>→</span>
               </Link>
@@ -536,7 +536,7 @@ const DataAnnotation = () => {
               annotation workflow.
             </p>
 
-            <Link to="/get-started" className="da-primary-button">
+            <Link to="/getStarted" className="da-primary-button">
               Start a Data Project
               <span>→</span>
             </Link>
@@ -776,7 +776,7 @@ const DataAnnotation = () => {
             for your needs.
           </p>
 
-          <Link to="/get-started" className="da-primary-button da-large-button">
+          <Link to="/getStarted" className="da-primary-button da-large-button">
             Get Started
             <span>→</span>
           </Link>
