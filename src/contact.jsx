@@ -545,7 +545,7 @@ const Contact = () => {
               customer support and business processes.
             </p>
 
-            <a href="/services/chatbot">
+            <a href="/service/aiChatbot">
               Learn more <span>→</span>
             </a>
           </div>
@@ -565,7 +565,7 @@ const Contact = () => {
               vision, NLP, and AI applications.
             </p>
 
-            <a href="/services/data-annotation">
+            <a href="/service/dataAnnotation">
               Learn more <span>→</span>
             </a>
           </div>
@@ -585,7 +585,7 @@ const Contact = () => {
               and custom software.
             </p>
 
-            <a href="/services/software">
+            <a href="/service/softwareDevelopment">
               Learn more <span>→</span>
             </a>
           </div>
