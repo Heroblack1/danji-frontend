@@ -490,9 +490,9 @@ const About = () => {
               <li>AI training datasets</li>
             </ul>
 
-            <a href="/services/data-annotation">
+            <Link to="/service/dataAnnotation">
               Explore service <span>→</span>
-            </a>
+            </Link>
           </div>
 
           <div className="service-card reveal-up" ref={addToRefs}>
@@ -515,9 +515,9 @@ const About = () => {
               <li>Product development</li>
             </ul>
 
-            <a href="/services/software">
+            <Link to="/service/softwareDevelopment">
               Explore service <span>→</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
