@@ -335,7 +335,12 @@ const Hompage = () => {
           </div>
 
           <div>
-            <button className="floating-btn">Get Started</button>
+            <button
+              className="floating-btn"
+              onClick={() => navigate("/getStarted")}
+            >
+              Get Started
+            </button>
           </div>
           {/* <div className="imageContainer">Int @#
             <img src={imgeSrc} alt="" className="image" />
@@ -399,7 +404,12 @@ const Hompage = () => {
                 </div>
               </div>
 
-              <button className="annotation-btn">Get Started →</button>
+              <button
+                className="annotation-btn"
+                onClick={() => navigate("/getStarted")}
+              >
+                Get Started →
+              </button>
             </div>
           </div>
         </section>
@@ -446,7 +456,12 @@ const Hompage = () => {
                 </div>
               </div>
 
-              <button className="software-btn">Get Started →</button>
+              <button
+                className="software-btn"
+                onClick={() => navigate("/getStarted")}
+              >
+                Get Started →
+              </button>
             </div>
 
             <div className="software-image-box">

@@ -503,7 +503,7 @@ const AIChatbot = () => {
               customers a better experience.
             </p>
 
-            <Link to="/get-started" className="ai-primary-button">
+            <Link to="/getStarted" className="ai-primary-button">
               Build Your AI Chatbot
               <span>→</span>
             </Link>
