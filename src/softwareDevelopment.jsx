@@ -530,7 +530,7 @@ const SoftwareDevelopment = () => {
               grow alongside your business.
             </p>
 
-            <Link to="/get-started" className="sd-primary-button">
+            <Link to="/getStarted" className="sd-primary-button">
               Discuss Your Project
               <span>→</span>
             </Link>
