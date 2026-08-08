@@ -203,7 +203,7 @@ const AIChatbot = () => {
             </p>
 
             <div className="ai-hero-actions">
-              <Link to="/get-started" className="ai-primary-button">
+              <Link to="/getStarted" className="ai-primary-button">
                 Get Started
                 <span>→</span>
               </Link>
@@ -718,7 +718,7 @@ const AIChatbot = () => {
             turn the idea into a working AI solution.
           </p>
 
-          <Link to="/get-started" className="ai-primary-button ai-large-button">
+          <Link to="/getStarted" className="ai-primary-button ai-large-button">
             Get Started With AI
             <span>→</span>
           </Link>
