@@ -13,6 +13,7 @@ import AIChatbot from "./aiChatbot";
 import SoftwareDevelopment from "./softwareDevelopment";
 import DataAnnotation from "./dataAnnotation";
 import Admin from "./admin";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
