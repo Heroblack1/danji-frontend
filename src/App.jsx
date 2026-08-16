@@ -4,7 +4,7 @@ import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import "./App.css";
 import Hompage from "./hompage";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Pricing from "./pricing";
 import About from "./about";
 import Contact from "./contact";
@@ -17,24 +17,27 @@ import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Hompage />} />
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Hompage />} />
 
-      <Route path="/pricing" element={<Pricing />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/getStarted" element={<GetStarted />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/getStarted" element={<GetStarted />} />
 
-      {/* SERVICES */}
-      <Route path="/service/aiChatbot" element={<AIChatbot />} />
-      <Route
-        path="/service/softwareDevelopment"
-        element={<SoftwareDevelopment />}
-      />
-      <Route path="/service/dataAnnotation" element={<DataAnnotation />} />
+        {/* SERVICES */}
+        <Route path="/service/aiChatbot" element={<AIChatbot />} />
+        <Route
+          path="/service/softwareDevelopment"
+          element={<SoftwareDevelopment />}
+        />
+        <Route path="/service/dataAnnotation" element={<DataAnnotation />} />
 
-      <Route path="/admin" element={<Admin />} />
-    </Routes>
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
