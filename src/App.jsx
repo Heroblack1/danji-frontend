@@ -14,6 +14,7 @@ import SoftwareDevelopment from "./softwareDevelopment";
 import DataAnnotation from "./dataAnnotation";
 import Admin from "./admin";
 import ScrollToTop from "./ScrollToTop";
+import Portfolio from "./portfolio";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
 
         {/* SERVICES */}
         <Route path="/service/aiChatbot" element={<AIChatbot />} />
+        <Route path="/softwareDevelopment/portfolio" element={<Portfolio />} />
         <Route
           path="/service/softwareDevelopment"
           element={<SoftwareDevelopment />}
