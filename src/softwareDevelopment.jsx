@@ -806,7 +806,7 @@ const SoftwareDevelopment = () => {
 
             <a href="/getStarted">Get Started</a>
 
-            <a href="/service/softwareDevelopment/portfolio">Get Started</a>
+            <a href="/service/softwareDevelopment/portfolio">Portfolio</a>
           </div>
 
           {/* CONTACT */}

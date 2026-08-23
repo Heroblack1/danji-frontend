@@ -40,10 +40,10 @@ const projects = [
 
   {
     id: 3,
-    title: "Lastank",
-    category: "Web Platform",
+    title: "Hotel Booking Website",
+    category: "Web Application",
     description:
-      "Lastank is a custom-built web platform developed to deliver a modern and engaging digital experience. The project combines thoughtful interface design with responsive development to ensure that the application performs smoothly across different devices and screen sizes.",
+      "A modern and responsive hotel booking platform designed to make finding and reserving accommodation simple and seamless. The application allows users to explore available hotels, view detailed property information, compare options, and enjoy an intuitive booking experience. Built with a focus on user experience, responsive design, and clean interface development, the project demonstrates the use of modern frontend technologies and reusable components to create a smooth and visually engaging web application. The platform is designed to work effectively across desktop, tablet, and mobile devices.",
     technologies: [
       "React",
       "JavaScript",
@@ -52,7 +52,7 @@ const projects = [
       "Modern Web Development",
     ],
     video:
-      "https://res.cloudinary.com/dbpykrfeg/video/upload/v1787473504/lastank_ix9v1q.mp4",
+      "https://res.cloudinary.com/dbpykrfeg/video/upload/v1787487608/hotel_booking_wjihlg.mp4",
   },
 ];
 
