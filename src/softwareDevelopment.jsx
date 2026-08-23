@@ -805,6 +805,8 @@ const SoftwareDevelopment = () => {
             <a href="#annotation">Data Annotation</a>
 
             <a href="/getStarted">Get Started</a>
+
+            <a href="/service/softwareDevelopment/portfolio">Get Started</a>
           </div>
 
           {/* CONTACT */}

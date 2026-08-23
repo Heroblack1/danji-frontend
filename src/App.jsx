@@ -30,7 +30,10 @@ function App() {
 
         {/* SERVICES */}
         <Route path="/service/aiChatbot" element={<AIChatbot />} />
-        <Route path="/softwareDevelopment/portfolio" element={<Portfolio />} />
+        <Route
+          path="service/softwareDevelopment/portfolio"
+          element={<Portfolio />}
+        />
         <Route
           path="/service/softwareDevelopment"
           element={<SoftwareDevelopment />}
