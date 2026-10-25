@@ -15,11 +15,13 @@ import DataAnnotation from "./dataAnnotation";
 import Admin from "./admin";
 import ScrollToTop from "./ScrollToTop";
 import Portfolio from "./portfolio";
+import AIChatWidget from "./AIChatWidget";
 
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <AIChatWidget />
       <Routes>
         <Route path="/" element={<Hompage />} />
 
