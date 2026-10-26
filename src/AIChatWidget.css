@@ -72,6 +72,7 @@
   min-width: 0;
 }
 
+/* Header AI icon */
 .assistant-avatar {
   display: flex;
   align-items: center;
@@ -83,8 +84,10 @@
   border-radius: 13px;
 
   background: linear-gradient(135deg, #1684ff, #0754d8);
-  color: white;
-  font-size: 24px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
 }
 
 .assistant-info h3 {
@@ -167,18 +170,10 @@
 }
 
 .message-avatar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-
-  background: #103b78;
-  color: #8dc5ff;
-  font-size: 15px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #ffffff;
 }
 
 .message-bubble {
@@ -348,8 +343,7 @@
   text-align: center;
 }
 
-/* Fixed floating button */
-
+/* Floating DAI button */
 .chat-toggle {
   position: fixed !important;
   right: 24px !important;
@@ -368,7 +362,9 @@
 
   background: linear-gradient(135deg, #1684ff, #0754d8);
   color: #ffffff;
-  font-size: 28px;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -1px;
   line-height: 1;
 
   box-shadow: 0 8px 28px rgba(0, 91, 255, 0.4);
