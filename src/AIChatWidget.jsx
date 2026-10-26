@@ -92,7 +92,7 @@ const AIChatWidget = () => {
       <div className={`chat-widget ${isOpen ? "open" : ""}`}>
         <div className="chat-header">
           <div className="assistant-info">
-            <div className="assistant-avatar">✦</div>
+            <div className="assistant-avatar">DAI</div>
 
             <div>
               <h3>DanjiTech AI</h3>
@@ -117,7 +117,7 @@ const AIChatWidget = () => {
           {messages.map((chat, index) => (
             <div className={`message-row ${chat.role}`} key={index}>
               {chat.role === "assistant" && (
-                <div className="message-avatar">✦</div>
+                <div className="message-avatar">DAI</div>
               )}
 
               <div className="message-bubble">{chat.content}</div>
@@ -182,12 +182,13 @@ const AIChatWidget = () => {
       </div>
 
       {/* FLOATING BUTTON */}
+
       <button
         className={`chat-toggle ${isOpen ? "active" : ""}`}
         onClick={() => setIsOpen(!isOpen)}
-        aria-label="Open AI Assistant"
+        aria-label={isOpen ? "Close AI Assistant" : "Open AI Assistant"}
       >
-        {isOpen ? "×" : "✦"}
+        {isOpen ? "×" : "DAI"}
       </button>
     </>
   );
